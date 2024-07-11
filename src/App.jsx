@@ -67,7 +67,7 @@ function App() {
               }
 
               <li className="nav-item">
-                <a className="nav-link" href="#" >Admin Portal</a>
+                <a className="nav-link" href="https://odin-blog-api-client-admin.netlify.app/" >Admin Portal</a>
               </li>
 
             </ul>
