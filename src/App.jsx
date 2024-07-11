@@ -81,7 +81,7 @@ function App() {
         {showPage == 'AllBlog' && <AllBlog isLogin = {isLogin} setShowPage={setShowPage}/>}
         {showPage == 'SignIn' && <SignIn setIsLogin={setIsLogin} setShowPage={setShowPage} />}
         {showPage == 'SignUp' && <SignUp setIsLogin={setIsLogin} setShowPage={setShowPage} />}
-        {showPage.split(',')[0] == 'ViewPost' && <ViewPost setShowPage={setShowPage} postId={showPage.split(',')[1]}/>}
+        {showPage.split(',')[0] == 'ViewPost' && <ViewPost setShowPage={setShowPage} postId={showPage.split(',')[1]} isLogin={isLogin}/>}
       </main>
 
       {/* Footer */}

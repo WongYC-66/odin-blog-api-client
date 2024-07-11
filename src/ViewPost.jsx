@@ -7,6 +7,7 @@ import { API_URL } from './api_url.js'
 export default function EditPost(props) {
     const postId = props.postId
     const setShowPage = props.setShowPage
+    const isLogin = props.isLogin
 
     const [post, setPost] = useState({})
     const [allComments, setAllComments] = useState([])
@@ -80,11 +81,12 @@ export default function EditPost(props) {
 
     return (
         <div className="">
+
             <h1>{post.title}</h1>
 
             <hr />
 
-            <p>{post.contents}</p>
+            <p dangerouslySetInnerHTML={{ __html: post.contents }}></p>
 
             {errData && <li className='text-danger'>{errData}</li>}
 
@@ -93,14 +95,14 @@ export default function EditPost(props) {
             <h2>Comments:</h2>
 
             <form method="POST" onSubmit={submitNewComment}>
-                <input type="text" className="form-control" name="comment" id="comment" placeholder="" />
+                <input type="text" className="form-control" name="comment" id="comment" placeholder={!isLogin ? "To post comment, please sign in" : ""}/>
                 <div className="my-1 d-flex flex-row-reverse">
                     <button type="submit" className="btn btn-primary btn-sm">Reply</button>
                 </div>
 
             </form>
 
-            {allComments.map(comment => <CommentCard key={comment._id} comment={comment} toFetch={toFetch} setToFetch={setToFetch}/>)}
+            {allComments.map(comment => <CommentCard key={comment._id} comment={comment} toFetch={toFetch} setToFetch={setToFetch} />)}
 
 
         </div>

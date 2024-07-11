@@ -52,8 +52,12 @@ export default function AllBlog({ isLogin, setShowPage }) {
     return (
         <div>
             <h1> All Blog </h1>
+            <div className="d-flex flex-wrap justify-content-around">
 
-            {posts.map(post => <BlogPreviewCard post={post} key={post._id} setShowPage={setShowPage} />)}
+                {posts.map(post =>
+                    <BlogPreviewCard post={post} key={post._id} setShowPage={setShowPage}/>
+                )}
+            </div>
 
         </div>
     );
