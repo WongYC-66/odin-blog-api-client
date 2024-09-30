@@ -17,7 +17,8 @@ export default function BlogPreviewCard(props) {
                     <h5 className="card-title">{post.title}</h5>
                     <h6 className="card-subtitle mb-2 text-body-secondary">{fmtTime(post.timestamp)}</h6>
 
-                    <p className="card-text text-break text-truncate">{post.contents}</p>
+                    {/* <p className="card-text text-break text-truncate">{post.contents}</p> */}
+                    <p className="card-text text-break overflow-hidden" style={{maxHeight: "300px"}}dangerouslySetInnerHTML={{__html: post.contents}}></p>
 
                 </div>
             </div >
