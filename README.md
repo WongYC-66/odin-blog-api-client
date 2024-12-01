@@ -8,7 +8,7 @@ A simple react-based blog web app built with vite, to fetch data from backend AP
 
 - FrontEnd - Client       : https://odin-blog-api-client.netlify.app/
 - FrontEnd - Admin        : https://odin-blog-api-client-admin.netlify.app/
-- Backend  : https://odin-blog-api-ycwong66.adaptable.app/
+- Backend  : https://odin-blog-api-p813.onrender.com/
 
 ## Tech stack 
 - FE: React / Bootstrap 
